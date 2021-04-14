@@ -1,0 +1,22 @@
+def count_substring(string, sub_string):
+    count=0
+    n=len(string)
+    m=len(sub_string)
+    for j in range(0,n):
+        arr=[]
+        c = ""
+        for i in range(j,m):
+            x = string[i]
+            arr.append(x)
+            
+        for o in arr:
+            c += o
+        
+        if c == sub_string:
+            count=count+1
+        if m-1==n-1:
+            return count  
+            break
+        else:
+            m=m+1
+          
